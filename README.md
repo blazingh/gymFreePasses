@@ -1,4 +1,4 @@
-# gymFreePasses
+# gym Free Entry Passes
 project for a gym to give people free trials
 
 
