@@ -24,9 +24,11 @@ then a didgital card with costum barcode is sent to there email (the card and ba
                
                
 after that they can come to the reception desk scan the digital card or the phisycal one to enter.
-there date and number of checkin is updated in the google sheet  document for the staff to see.
+
+there date and number of checkin is updated in the google sheet document for the staff to see.
 if tehy exceed the number of days it show, otherwise it show the vist count and there name
 
+![Screenshot 2022-07-08 201133](https://user-images.githubusercontent.com/8129122/178039084-59a82679-ab6a-4211-ae55-7c9ce8298f7f.png)
 
 
 note: you can not use this code derictly there is couple things missing (the .env file and the google sheet token)
