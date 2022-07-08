@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='user_input.css' )}}">
+        <title>Free Pass</title>
+    </head>
+    <body>
+        <a href="/">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png' )}}" height="75px" alt="logo">
+        </div>
+        </a>
+        <div>
+            <form action="/checkin" method="post" class="inputs">
+                <label>Barcode ID</label>
+                <input type="text" name="code" class="field" id="entry">
+            </form>
+            <br>
+            {% for i in res %}
+            {% if res|length > 2 %}
+            <div><label style="color: green;" class="output">{{i}}</label></div><br>
+            {% else %}
+            <div><label style="color: white;" class="output">{{i}}</label></div><br>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% if res|length >= 1 %}
+        <a href="/checkin"><button class="btn">clear</button>
+        {% endif %}
+        <script>
+            window.onload = function () {
+                var input = document.getElementById('entry');
+                input.focus();
+                input.select();
+                }
+        </script>
+    </body>
+</html>

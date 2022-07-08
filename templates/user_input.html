@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='user_input.css' )}}">
+        <title>Free Pass</title>
+    </head>
+    <body>
+        <a href="/">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png' )}}" height="75px" alt="logo">
+        </div>
+        </a>
+        <div>
+            <form action="/submition" method="post" class="inputs">
+                <label> Full Name |  الاسم الكامل </label>
+                <input type="text" name="name" class="field">
+                <br>
+                <label> Phone Number | رقم الجوال </label>
+                <input type="text" name="phone" class="field">
+                <br>
+                <label> Email Adress | البريد الالكتروني </label>
+                <input type="email" name="email" class="field">
+                <br>
+                <input type="submit" value="Submit" class="btn">
+            </form>
+        </div>
+    </body>
+</html>

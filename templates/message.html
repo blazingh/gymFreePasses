@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='user_input.css' )}}">
+        <title>Free Pass</title>
+    </head>
+    <body>
+         <a href="/">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png' )}}" height="75px" alt="logo">
+        </div>
+        </a>
+        <div>
+            {% if mess == "done" %}
+            <h3> Your Pass Has Been Sent To Your Email <h3>
+            <h4>check your spam folder, your pass might be there.</h4>
+            <h4>If you're having any trouble please contact our support team on: 0500515640</h4>
+            {% elif mess == "exists" %}
+            <h3> You have Already been registerd <h3>
+            <h4>check your spam folder, your pass might be there.</h4>
+            <h4>If you're having any trouble please contact our support team on: 0500515640</h4>
+            {% elif mess == "phone" %}
+            <h3> Please Enter a valid Phone Number <h3>
+            <h4>If you're having any trouble please contact our support team on: 0500515640</h4>
+            {% elif mess == "email" %}
+            <h3> Please Enter a valid Email Adress <h3>
+            <h4>If you're having any trouble please contact our support team on: 0500515640</h4>
+            {% elif mess == "append" %}
+            <h3> New Client Has been Added <h3>
+            <h4>If you're having any trouble please contact our support team on: 0500515640</h4>
+            {% else %}
+            <h3>Unknown error</h3>
+            <h4>If you're having any trouble please contact our support team on: 0500515640</h4>
+            {% endif %}
+        </div>
+    </body>
+</html>

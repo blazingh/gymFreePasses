@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='user_input.css' )}}">
+        <title>Free Pass</title>
+    </head>
+    <body>
+        <a href="/">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png' )}}" height="75px" alt="logo">
+        </div>
+        </a>
+        <div>
+            <form action="/append" method="post" class="inputs">
+                <label> Barcode Number </label>
+                <input type="text" name="code" class="field" id="entry" required>
+                <br>
+                <label> Full Name |  الاسم الكامل </label>
+                <input type="text" name="name" class="field" required>
+                <br>
+                <label> Phone Number | رقم الجوال </label>
+                <input type="text" name="phone" class="field" required>
+                <br>
+                <input type="submit" value="Submit" class="btn">
+            </form>
+        </div>
+        <script>
+                window.onload = function () {
+                var input = document.getElementById('entry');
+                input.focus();
+                input.select();
+                }
+        </script>
+    </body>
+</html>
